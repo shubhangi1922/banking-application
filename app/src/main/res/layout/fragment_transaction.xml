@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/lyt"
+    android:orientation="horizontal"
+    android:weightSum="3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+android:id="@+id/btn_all"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_all"
+        android:text="ALL"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_credit"
+
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_all"
+
+        android:text="Credit"
+        android:textColor="#009688"
+
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Debit"
+        android:id="@+id/btn_debit"
+
+        android:textColor="#F44336"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_all"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/lyt"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

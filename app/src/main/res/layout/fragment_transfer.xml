@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:background="#fff"
+        android:src="@drawable/logo"
+        android:id="@+id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/img_money_transfer"
+        />
+
+
+    <EditText
+        android:id="@+id/et_acc_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text=""
+        android:hint="Enter Account number"
+        android:fontFamily="@font/regular"/>
+<TextView
+    android:id="@+id/tv_status"
+    android:fontFamily="@font/bold"
+    android:textColor="#000"
+    android:layout_marginRight="0dp"
+    android:layout_marginLeft="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <EditText
+
+        android:id="@+id/et_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text=""
+        android:digits="1234567890"
+        android:inputType="number"
+        android:hint="Enter Amount"
+        android:fontFamily="@font/regular"/>
+    <TextView
+        android:id="@+id/tv_validAmount"
+        android:fontFamily="@font/bold"
+        android:textColor="#000"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_transfer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_transfer"
+        android:text="Transfer"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:layout_gravity="center"/>
+</LinearLayout>

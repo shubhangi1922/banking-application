@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ImageView
+    android:background="#fff"
+    android:src="@drawable/logo"
+    android:id="@+id/img_logo"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"/>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_below="@id/img_logo"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <TextView
+        android:id="@+id/tv_greetings"
+        android:textColor="#000"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:text=""
+        android:fontFamily="@font/bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_today_date"
+        android:fontFamily="@font/regular"
+        android:text="Today is Oct 22, 2021"
+        android:textColor="#ffffff"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/tv_greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cd_data"
+        app:cardElevation="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000"
+                    android:fontFamily="@font/bold"
+                    android:text="Your Today's Credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_credited"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#009688"
+                    android:fontFamily="@font/bold"
+                    android:text="₹ 500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000"
+                    android:fontFamily="@font/bold"
+                    android:text="Your Today's Debit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_debited"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#F44336"
+                    android:fontFamily="@font/bold"
+                    android:text="₹ 1500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000"
+                    android:fontFamily="@font/bold"
+                    android:text="Your Current Balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_acc_balance"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#673AB7"
+                    android:fontFamily="@font/bold"
+                    android:text="₹ "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_today_trans"
+        android:fontFamily="@font/regular"
+        android:text="Today's Transaction"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/cd_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/tv_today_trans"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

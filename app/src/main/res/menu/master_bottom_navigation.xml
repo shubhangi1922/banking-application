@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationAccounts"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="Account" />
+
+    <item
+        android:id="@+id/navigationAllCustomer"
+        android:icon="@drawable/ic_user"
+        android:title="User" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigationHome"-->
+<!--        android:icon="@drawable/ic_home"-->
+<!--        android:title="Home" />-->
+
+    <item
+        android:id="@+id/navigationTransactions"
+        android:icon="@drawable/ic_lending"
+        android:title="Transactions" />
+
+    <item
+        android:id="@+id/navigationTransfer"
+        android:icon="@drawable/ic_send"
+        android:title="Transfer" />
+
+
+
+
+</menu>
